@@ -267,7 +267,7 @@ class gpPanel : public wxPanel, public gpSizer//, private wxFileDropTarget,
         *   @param layer    layer to be lock
         *   @param lock     lock boolean.
         */
-		void LockAspect(gpLayer *layer, bool lock=true);
+		//void LockAspect(gpLayer *layer, bool lock=true);
         /**
         *   Lock X axis
         *   @param layer    layer to be lock

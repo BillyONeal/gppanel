@@ -559,7 +559,12 @@ bool gpPanel::SetLayerVisible(int id, bool viewable)
     gpLayer_s* layer = GetLayerByMenuId(id);
     return SetLayerVisible(layer, viewable);
 }
-
+bool gpPanel::IsLayerVisible(const wxString &name)
+{
+    gpLayer_s* l = GetLayerByName(name);
+    if(l) return IsLayerVisible(l->layer);
+    return false;
+}
 void gpPanel::FitAll()
 {
     gpLayerList_t::iterator it;
