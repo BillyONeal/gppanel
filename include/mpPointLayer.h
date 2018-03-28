@@ -144,7 +144,7 @@ protected:
 	double          mouseX, mouseY;		//!< contains mouse coordinates
 	bool            m_DragOnlyPoint;    //!< If true, point modifing is allways possible, but only when mouse draq point
 
-	PointList       m_polygon;
+	wxPointList       m_polygon;
 
 	//second point variables
 	mpPointLayer*   m_SecondPointLayer;		//!< pointer to 2. mpPointLayer. ex. Calculate distance of 2 points.

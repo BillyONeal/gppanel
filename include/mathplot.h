@@ -84,8 +84,6 @@
 
 #include "mpLayer.h"
 
-WX_DECLARE_LIST(wxPoint, PointList);
-#include <wx/listimpl.cpp>
 
 
 // For memory leak debug
@@ -269,18 +267,18 @@ enum mpTaggLine
 class polygon
 {
 	private:
-		PointList m_polygon;
+		wxPointList m_polygon;
 
 	public:
-		polygon(PointList poly)                 { m_polygon = poly; }
+		polygon(wxPointList poly)                 { m_polygon = poly; }
 		~polygon()                              { }
 		polygon(const polygon& poly)            { m_polygon = poly.GetPolygon(); } //copy constructor
-		void SetPolygon(const PointList& poly)  { m_polygon = poly; }
-		PointList GetPolygon() const            { return m_polygon; }
-		PointList get(double angle=0, double scale=1)
+		void SetPolygon(const wxPointList& poly)  { m_polygon = poly; }
+		wxPointList GetPolygon() const            { return m_polygon; }
+		wxPointList get(double angle=0, double scale=1)
 		{
-			PointList out;
-			PointList::iterator it;
+			wxPointList out;
+			wxPointList::iterator it;
 			for(it=m_polygon.begin();it!=m_polygon.end();++it)
 			{
 				out.Append( rotate(**it, angle, scale) );

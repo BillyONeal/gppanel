@@ -318,7 +318,7 @@ void mpPointLayer::Plot(wxDC & dc, mpWindow & w)
 
 #if wxCHECK_VERSION(3, 0, 0)
 		// 2.9< -> void wxDC::DrawPolygon	(	const wxPointList *points,wxCoord 	xoffset = 0,wxCoord 	yoffset = 0,wxPolygonFillMode 	fill_style = wxODDEVEN_RULE )
-		dc.DrawPolygon((wxPointList*)&m_polygon);
+		dc.DrawPolygon(&m_polygon);
 #elif wxCHECK_VERSION(2, 8, 0)
 		// 2.8.x -> void DrawPolygon(wxList *points, wxCoord xoffset = 0, wxCoord yoffset = 0, int fill_style = wxODDEVEN_RULE)
 		dc.DrawPolygon((wxList*)&m_polygon);
