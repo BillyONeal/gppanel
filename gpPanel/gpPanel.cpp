@@ -201,9 +201,9 @@ void gpPanel::DelAllLayers(bool alsoDeleteObjects)
 
 bool gpPanel::AddLayer(gpLayer *layer, mpWindow*& newMp, int MenuMask)
 {
-    if(layer==NULL)return false;
+    if(layer==nullptr)return false;
 
-    newMp = new mpWindow(this,wxNewId(), this->GetPosition(),this->GetSize(),0);
+    newMp = new mpWindow(this,wxNewId(), this->GetPosition(),this->GetSize(),wxVSCROLL | wxHSCROLL);
     gpLayer_s *slayer;
 
     newMp->SetToolTip(layer);
