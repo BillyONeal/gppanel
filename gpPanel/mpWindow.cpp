@@ -20,6 +20,7 @@
 // For compilers that support precompilation, includes "wx.h".
 #include <wx/window.h>
 //#include <wx/wxprec.h>
+#include <wx/dcclient.h>
 
 // Comment out for release operation:
 // (Added by J.L.Blanco, Aug 2007)
@@ -108,9 +109,6 @@
 #define MP_POPMENU_HELP_INFO            _("Tietoa hiirilekomennoista")
 #endif
 
-// See doxygen comments.
-double mpWindow::zoomIncrementalFactor = 1.5;
-
 //-----------------------------------------------------------------------------
 // mpWindow
 //-----------------------------------------------------------------------------
@@ -166,7 +164,10 @@ mpWindow::mpWindow(wxWindow *parent, wxWindowID id, const wxPoint &pos, const wx
 	m_mouseMovedAfterRightClick = FALSE;
 	m_mouseMovedAfterMiddleClickWithCtrl = FALSE;
 
-	m_movingInfoLayer = NULL;
+    // See doxygen comments.
+    zoomIncrementalFactor = 1.5;
+
+    m_movingInfoLayer = NULL;
 	m_movingPointLayer = NULL;
 	// Set margins to 0
 	m_marginTop = 0; m_marginRight = 0; m_marginBottom = 0; m_marginLeft = 0;
