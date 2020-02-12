@@ -15,6 +15,7 @@
 #include <wx/gdicmn.h>
 #include <deque>
 #include <map>
+#include <ostream>
 #include "mathplot.h"
 
 
