@@ -5,6 +5,9 @@
 #include "CMinMax.h"
 #include "xyMultimapLabel.h"
 #include <deque>
+#include <time.h>
+#include <vector>
+#include <limits>
 
 //This possible to handle a lot of data quicker
 //plot just second 1000 point to display..
